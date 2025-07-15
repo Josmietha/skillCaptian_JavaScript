@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="document.write('Area of Rectangle is: '+ans.calculateArea());">Click Me</button>
+    <script>
+        function Rectangle(width, height) {
+            this.width = width;
+            this.height = height;
+            this.calculateArea = function() {
+                return this.width * this.height;
+            }
+        }
+        let ans = new Rectangle(10, 20);
+        
+    </script>
+</body>
+</html>
