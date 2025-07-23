@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Understanding Scopes in JavaScript</h3>
+    <script>
+        const globalVar = 100;
+        function localScopeDemo() {
+            const localVar = 50;
+            console.log('Local Variable: ' + localVar);
+            function innerFunction(){
+                console.log('Gloabal Variable: ' + globalVar);
+            }
+            innerFunction();
+        }
+        localScopeDemo();
+    </script>
+</body>
+</html>

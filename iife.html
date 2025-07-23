@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Check out console for result!</h3>
+    <script>
+        (function(){
+            let a = 5, b = 10;
+            console.log('Sum: ' + (a + b));
+        })();
+        console.log('This is an IIFE example!');
+        function calculateTax(){
+            let price = 100;
+            return function(){
+                return price * 0.2;
+            };
+        }
+        const tax = calculateTax();
+        console.log('Tax: ' + tax());
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hey! Check out the console for results!</h3>
+    <script>
+        function saveToLocalStorage(){
+            const preferences = {
+                theme: 'dark',
+                language: 'en'
+            };
+            localStorage.setItem('userPreferences', JSON.stringify(preferences));
+            console.log('Preferences saved to localStorage:', preferences);
+            
+        }
+        function loadFromSessionStorage(){
+            const preferences = JSON.parse(sessionStorage.getItem('userPreferences'));
+            if(preferences){
+                console.log('Preferences loaded from sessionStorage:', preferences);
+            } else {
+                console.log('No preferences found in sessionStorage.');
+            }
+        }
+        saveToLocalStorage();
+        loadFromSessionStorage();
+    </script>
+</body>
+</html>
