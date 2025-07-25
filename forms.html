@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+        <p id="status"></p>
+    </form>
+    <script>
+        const statusMessage = document.getElementById('status');
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            if (!isValidEmail(email)) {
+                statusMessage.innerHTML = 'Please enter a valid email address.';
+                statusMessage.style.color = 'red';
+                return;
+            }
+            statusMessage.innerHTML = `Thank you, ${name}! Your message has been sent.`;
+            statusMessage.style.color = 'green';
+            }
+        );
+        function isValidEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+        document.getElementById('contactForm').addEventListener('reset', function() {
+            statusMessage.innerHTML = '';
+            statusMessage.style.color = '';
+        });
+        
+    </script>
+</body>
+</html>
