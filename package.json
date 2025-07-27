@@ -1,0 +1,26 @@
+{
+  "name": "skillcaptian_javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Day2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josmietha/skillCaptian_JavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josmietha/skillCaptian_JavaScript/issues"
+  },
+  "homepage": "https://github.com/Josmietha/skillCaptian_JavaScript#readme",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.100.2",
+    "webpack-cli": "^6.0.1"
+  }
+}
